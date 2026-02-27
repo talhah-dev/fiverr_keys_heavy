@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Indivisible", sans-serif;
+}
+
+img,
+button,
+iframe,
+a {
+    user-select: none;
+}
+
+input:user-invalid {
+    border: 1.5px solid rgba(255, 0, 0, 0.416);
+}
+
+@keyframes marquee {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+.animate-marquee {
+  animation: marquee var(--marquee-duration, 28s) linear infinite;
+  will-change: transform;
+}
+
+.marquee-wrap:hover .animate-marquee {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+    transform: translate3d(0, 0, 0);
+  }
+}

@@ -5,10 +5,6 @@ navbar.innerHTML = `
   <!-- Top mini bar -->
   <div class="hidden md:block border-b border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-10 flex items-center justify-end gap-6">
-      <a href="#" class="text-xs tracking-wide hover:text-blue-300 transition">NEWS</a>
-      <a href="#testimonials" class="text-xs tracking-wide hover:text-blue-300 transition">REVIEWS</a>
-      <a href="#" class="text-xs tracking-wide hover:text-blue-300 transition">CAREERS</a>
-
       <div class="flex items-center gap-3 ml-4">
         <a href="#" aria-label="Facebook" class="hover:text-blue-300 transition">
           <i class="fa-brands fa-facebook-f"></i>
@@ -25,7 +21,7 @@ navbar.innerHTML = `
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <!-- Logo -->
       <a href="./index.html" class="flex items-center gap-3">
-        <img src="./docs/assets/logo.png" alt="Keys Heavy Towing & Recovery" class="h-24 w-auto object-contain" />
+        <img src="./docs/assets/logo.png" alt="Keys Heavy Towing & Recovery" class="h-16 w-auto object-contain" />
       </a>
 
       <!-- Desktop links -->

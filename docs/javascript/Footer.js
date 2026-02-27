@@ -3,14 +3,14 @@ const footer = document.getElementById("footer");
 footer.innerHTML = `
   <footer class="bg-white border-t border-slate-200">
   <!-- Newsletter -->
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-14">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-14">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
       <!-- Logo / Tagline -->
       <div class="lg:col-span-4" data-aos="fade-up">
         <img
           src="./docs/assets/logo.png" 
           alt="Keys Heavy Towing & Recovery"
-          class="h-34 w-auto object-contain"
+          class="h-20 w-auto object-contain"
         />
         <p class="mt-3 text-sm text-slate-600 leading-relaxed">
           Tavernier, FL • Serving Key West to Miami

@@ -66,87 +66,16 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.1/dist/lenis.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
     <link rel="stylesheet" href="./docs/Style.css" />
 </head>
 
 
 <body>
 
-    <div id="toTopBtn"
-        class="fixed bottom-5 right-5 z-40 w-12 h-12 rounded-full bg-[#1b538e] text-white flex items-center justify-center cursor-pointer shadow-lg transition-all duration-500 opacity-0 translate-y-4 pointer-events-none hover:bg-[#1b538e]/80">
-        <i class="fa-solid fa-angle-up"></i>
-    </div>
-
+    <div id="bottomToTopScroll"></div>
     <!-- NAVBAR -->
-    <header class="bg-black text-white">
-        <!-- Top mini bar -->
-        <div class="hidden md:block border-b border-white/10">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-10 flex items-center justify-end gap-6">
-                <div class="flex items-center gap-3 ml-4">
-                    <a href="#" aria-label="Facebook" class="hover:text-blue-300 transition">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                    <a href="#" aria-label="Instagram" class="hover:text-blue-300 transition">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Main nav -->
-        <div class="border-b bg-[#1c1c1e] border-white/10">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-                <!-- Logo -->
-                <a href="./index.html" class="flex items-center gap-3">
-                    <img src="./docs/assets/logo.png" alt="Keys Heavy Towing & Recovery"
-                        class="h-16 w-auto object-contain" />
-                </a>
-
-                <!-- Desktop links -->
-                <nav class="hidden lg:flex items-center gap-8">
-                    <a href="./index.html" class="text-sm hover:text-blue-300 transition">HOME</a>
-                    <a href="./about.html" class="text-sm hover:text-blue-300 transition">ABOUT</a>
-                    <a href="./contact.html" class="text-sm hover:text-blue-300 transition">CONTACT</a>
-
-                    <a href="tel:7866098524"
-                        class="ml-2 inline-flex items-center justify-center px-5 py-3 bg-[#1b538e] hover:bg-blue-800 transition text-sm">
-                        (786) 609-8524
-                    </a>
-                </nav>
-
-                <!-- Mobile button -->
-                <button id="menuBtn"
-                    class="lg:hidden w-11 h-11 border border-white/15 hover:border-white/25 transition flex items-center justify-center"
-                    aria-label="Open menu" aria-expanded="false">
-                    <i class="fa-solid fa-bars text-lg"></i>
-                </button>
-            </div>
-
-            <!-- Mobile menu (smooth open/close) -->
-            <div id="mobileMenu"
-                class="lg:hidden overflow-hidden max-h-0 opacity-0 transition-all duration-300 ease-in-out border-t border-white/10">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 py-5 flex flex-col gap-4">
-                    <a href="./index.html" class="py-2 hover:text-blue-300 transition">Home</a>
-                    <a href="./about.html" class="py-2 hover:text-blue-300 transition">About</a>
-                    <a href="./contact.html" class="py-2 hover:text-blue-300 transition">Contact</a>
-
-                    <a href="tel:7866098524"
-                        class="mt-2 inline-flex items-center justify-center px-5 py-3 bg-[#1b538e] hover:bg-blue-800 transition">
-                        Call (786) 609-8524
-                    </a>
-
-                    <div class="pt-3 border-t border-white/10 flex items-center gap-4">
-                        <a href="#" aria-label="Facebook" class="hover:text-blue-300 transition">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                        <a href="#" aria-label="Instagram" class="hover:text-blue-300 transition">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    <div id="navbar"></div>
 
 
     <main>
@@ -161,7 +90,7 @@
 
             <div class="relative z-10 min-h-[60vh] sm:min-h-[70vh]">
                 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-full min-h-[60vh] sm:min-h-[70vh] flex items-end">
-                    <div class="pb-10 sm:pb-14 max-w-xl">
+                    <div class="pb-10 sm:pb-14 max-w-xl" data-aos="fade-up">
                         <p class="text-white/70 text-sm tracking-[0.18em] uppercase">
                             Contact Us
                         </p>
@@ -181,7 +110,7 @@
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
                     <!-- Left Info -->
-                    <div class="lg:col-span-5">
+                    <div class="lg:col-span-5" data-aos="fade-up">
                         <p class="text-[#0d57a5] text-xs uppercase tracking-[0.18em]">
                             General Inquiries
                         </p>
@@ -244,7 +173,7 @@
                     </div>
 
                     <!-- Right Form -->
-                    <div class="lg:col-span-7">
+                    <div class="lg:col-span-7" data-aos="fade-up">
                         <div class="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
                             <p class="text-slate-900 leading-relaxed">
                                 We’d love to hear from you. Fill out the form and we’ll get back to you as soon as
@@ -253,9 +182,8 @@
 
                             <div id="formAlert" class="hidden mb-6 border px-4 py-3 text-sm"></div>
 
-                            <form id="contactForm" action="process.php" method="POST" class="mt-6 space-y-5">
+                            <form action="process.php" method="POST" class="mt-6 space-y-5">
                                 <input type="text" name="company" class="hidden" tabindex="-1" autocomplete="off" />
-                                <input type="text" name="website" class="hidden" tabindex="-1" autocomplete="off" />
 
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     <div>
@@ -325,27 +253,18 @@
                                 </div>
 
                                 <div class="flex justify-end">
-                                    <button id="contactSubmitBtn" type="submit"
+                                    <button type="submit"
                                         class="px-8 py-3 rounded-none bg-[#0d57a5] hover:bg-[#0b4a8a] text-white transition">
                                         Submit
                                     </button>
                                 </div>
                             </form>
+
                             <script>
                                 (function () {
                                     const alertBox = document.getElementById("formAlert");
-                                    const contactForm = document.getElementById("contactForm");
-                                    const submitBtn = document.getElementById("contactSubmitBtn");
                                     const params = new URLSearchParams(window.location.search);
                                     const status = params.get("status");
-
-                                    if (contactForm && submitBtn) {
-                                        contactForm.addEventListener("submit", () => {
-                                            submitBtn.disabled = true;
-                                            submitBtn.classList.add("opacity-75", "cursor-not-allowed");
-                                            submitBtn.textContent = "Sending...";
-                                        });
-                                    }
 
                                     if (!status) return;
 
@@ -354,19 +273,7 @@
                                     if (status === "success") {
                                         alertBox.className =
                                             "mb-6 border px-4 py-3 text-sm border-green-200 bg-green-50 text-green-800";
-                                        alertBox.textContent = "Message sent successfully. We will get back to you as soon as possible.";
-                                    } else if (status === "invalid") {
-                                        alertBox.className =
-                                            "mb-6 border px-4 py-3 text-sm border-amber-200 bg-amber-50 text-amber-800";
-                                        alertBox.textContent = "Please complete all required fields with valid information.";
-                                    } else if (status === "config") {
-                                        alertBox.className =
-                                            "mb-6 border px-4 py-3 text-sm border-amber-200 bg-amber-50 text-amber-800";
-                                        alertBox.textContent = "Form is not configured yet. Set CONTACT_FORM_TO on the server.";
-                                    } else if (status === "blocked") {
-                                        alertBox.className =
-                                            "mb-6 border px-4 py-3 text-sm border-amber-200 bg-amber-50 text-amber-800";
-                                        alertBox.textContent = "Submission blocked by spam protection. Please try again.";
+                                        alertBox.textContent = "Message sent successfully. We’ll get back to you as soon as possible.";
                                     } else {
                                         alertBox.className =
                                             "mb-6 border px-4 py-3 text-sm border-red-200 bg-red-50 text-red-800";
@@ -386,181 +293,14 @@
         </section>
     </main>
 
-    <footer class="bg-white border-t border-slate-200">
-        <!-- Newsletter -->
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-14">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-                <!-- Logo / Tagline -->
-                <div class="lg:col-span-4" data-aos="fade-up">
-                    <img src="./docs/assets/logo.png" alt="Keys Heavy Towing & Recovery"
-                        class="h-20 w-auto object-contain" />
-                    <p class="mt-3 text-sm text-slate-600 leading-relaxed">
-                        Tavernier, FL • Serving Key West to Miami
-                    </p>
-                </div>
-
-                <!-- Newsletter form -->
-                <div class="lg:col-span-8" data-aos="fade-up">
-                    <p class="text-slate-900 font-bold uppercase tracking-wide text-sm">
-                        Sign up for our newsletter
-                    </p>
-                    <p class="mt-2 text-sm text-slate-600 leading-relaxed">
-                        Subscribe for occasional updates about service coverage and availability.
-                    </p>
-
-                    <form class="mt-5 grid grid-cols-1 md:grid-cols-12 gap-3">
-                        <div class="md:col-span-9">
-                            <label class="sr-only" for="newsletter-email">Email address</label>
-                            <input id="newsletter-email" type="email" placeholder="Email Address"
-                                class="w-full px-4 py-3 rounded-none border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-600/25 focus:border-blue-600" />
-                        </div>
-
-                        <div class="md:col-span-3">
-                            <button type="submit"
-                                class="w-full py-3 rounded-none bg-[#1b538e] hover:bg-[#1b538e]/80 text-white transition">
-                                Sign Up
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        <!-- Footer Links Row -->
-        <div class="border-t border-slate-200">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
-                    <!-- HQ -->
-                    <div class="md:col-span-4" data-aos="fade-up">
-                        <p class="text-slate-900 font-bold text-sm uppercase tracking-wide">Headquarters</p>
-                        <div class="mt-4 text-sm text-slate-600 leading-relaxed space-y-2">
-                            <p>90168 Overseas Highway</p>
-                            <p>Tavernier, Florida 33070</p>
-                            <p>
-                                p:
-                                <a href="tel:7866098524" class="text-[#1b538e] hover:underline">
-                                    (786) 609-8524
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Links 1 -->
-                    <div class="md:col-span-4" data-aos="fade-up">
-                        <p class="text-slate-900 font-bold text-sm uppercase tracking-wide">Pages</p>
-                        <ul class="mt-4 space-y-3 text-sm text-slate-600">
-                            <li><a href="./index.html" class="hover:text-[#1b538e] transition">Home</a></li>
-                            <li><a href="./about.html" class="hover:text-[#1b538e] transition">About Us</a></li>
-                            <li><a href="./contact.html" class="hover:text-[#1b538e] transition">Contact Us</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Links 2 -->
-                    <div class="md:col-span-4" data-aos="fade-up">
-                        <p class="text-slate-900 font-bold text-sm uppercase tracking-wide">Quick Links</p>
-                        <ul class="mt-4 space-y-3 text-sm text-slate-600">
-                            <li><a href="./index.html#services" class="hover:text-[#1b538e] transition">Services</a>
-                            </li>
-                            <li><a href="./index.html#testimonials"
-                                    class="hover:text-[#1b538e] transition">Testimonials</a></li>
-                            <li>
-                                <a href="https://www.google.com/maps?q=90168+Overseas+Highway+Tavernier+FL+33070"
-                                    target="_blank" class="hover:text-[#1b538e] transition">
-                                    Directions
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Bottom Bar -->
-        <div class="border-t border-slate-200">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-                <div class="grid grid-cols-1 sm:grid-cols-3 items-center gap-4 text-sm text-slate-500">
-                    <div class="text-center sm:text-left">
-                        Copyright © 2026. Keys Heavy Towing &amp; Recovery
-                    </div>
-
-                    <div class="flex items-center justify-center gap-4">
-                        <a href="#" aria-label="Facebook"
-                            class="w-9 h-9 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 hover:text-[#1b538e] hover:border-blue-200 hover:bg-blue-50 transition">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                        <a href="#" aria-label="Instagram"
-                            class="w-9 h-9 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 hover:text-[#1b538e] hover:border-blue-200 hover:bg-blue-50 transition">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                    </div>
-
-                    <div class="text-center sm:text-right">
-                        <a href="#" class="hover:text-[#1b538e] transition">Privacy Policy</a>
-                        <span class="text-slate-300 px-2">|</span>
-                        <a href="#" class="hover:text-[#1b538e] transition">Terms of Services</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <div id="footer"></div>
 
 
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="https://unpkg.com/lenis@1.3.1/dist/lenis.min.js"></script>
-
-
-    <script>
-        const lenis = new Lenis({
-            autoRaf: true,
-        });
-
-        const toTopBtn = document.getElementById("toTopBtn");
-
-        const toggleToTop = () => {
-            if (window.scrollY > 450) {
-                toTopBtn.classList.remove("opacity-0", "translate-y-4", "pointer-events-none");
-                toTopBtn.classList.add("opacity-100", "translate-y-0");
-            } else {
-                toTopBtn.classList.add("opacity-0", "translate-y-4", "pointer-events-none");
-                toTopBtn.classList.remove("opacity-100", "translate-y-0");
-            }
-        };
-
-        window.addEventListener("scroll", toggleToTop);
-        toggleToTop();
-
-        toTopBtn.addEventListener("click", () => {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        });
-
-
-        // navbar
-
-
-        const btn = document.getElementById("menuBtn");
-        const menu = document.getElementById("mobileMenu");
-
-        const openMenu = () => {
-            btn.setAttribute("aria-expanded", "true");
-            menu.classList.remove("max-h-0", "opacity-0");
-            menu.classList.add("max-h-[420px]", "opacity-100");
-        };
-
-        const closeMenu = () => {
-            btn.setAttribute("aria-expanded", "false");
-            menu.classList.add("max-h-0", "opacity-0");
-            menu.classList.remove("max-h-[420px]", "opacity-100");
-        };
-
-        btn.addEventListener("click", () => {
-            const expanded = btn.getAttribute("aria-expanded") === "true";
-            expanded ? closeMenu() : openMenu();
-        });
-
-        window.addEventListener("resize", () => {
-            if (window.innerWidth >= 1024) closeMenu();
-        });
-
-    </script>
+    <script src="./Docs/javascript/global.js"></script>
+    <script src="./Docs/javascript/Navbar.js"></script>
+    <script src="./Docs/javascript/Footer.js"></script>
 
 </body>
 

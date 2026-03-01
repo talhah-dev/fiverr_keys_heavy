@@ -68,93 +68,17 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.1/dist/lenis.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
     <link rel="stylesheet" href="./docs/Style.css" />
-    <style>
-        .pac-container {
-            z-index: 9999 !important;
-            border-radius: 0.75rem;
-        }
-    </style>
 </head>
 
 
 <body>
 
-    <div id="toTopBtn"
-        class="fixed bottom-5 right-5 z-40 w-12 h-12 rounded-full bg-[#1b538e] text-white flex items-center justify-center cursor-pointer shadow-lg transition-all duration-500 opacity-0 translate-y-4 pointer-events-none hover:bg-[#1b538e]/80">
-        <i class="fa-solid fa-angle-up"></i>
-    </div>
-
+    <div id="bottomToTopScroll"></div>
     <!-- NAVBAR -->
-    <header class="bg-black text-white">
-        <!-- Top mini bar -->
-        <div class="hidden md:block border-b border-white/10">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-10 flex items-center justify-end gap-6">
-                <div class="flex items-center gap-3 ml-4">
-                    <a href="#" aria-label="Facebook" class="hover:text-blue-300 transition">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                    <a href="#" aria-label="Instagram" class="hover:text-blue-300 transition">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
+    <div id="navbar"></div>
 
-        <!-- Main nav -->
-        <div class="border-b bg-[#1c1c1e] border-white/10">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-                <!-- Logo -->
-                <a href="./index.html" class="flex items-center gap-3">
-                    <img src="./docs/assets/logo.png" alt="Keys Heavy Towing & Recovery"
-                        class="h-16 w-auto object-contain" />
-                </a>
-
-                <!-- Desktop links -->
-                <nav class="hidden lg:flex items-center gap-8">
-                    <a href="./index.html" class="text-sm hover:text-blue-300 transition">HOME</a>
-                    <a href="./about.html" class="text-sm hover:text-blue-300 transition">ABOUT</a>
-                    <a href="./contact.html" class="text-sm hover:text-blue-300 transition">CONTACT</a>
-
-                    <a href="tel:7866098524"
-                        class="ml-2 inline-flex items-center justify-center px-5 py-3 bg-[#1b538e] hover:bg-blue-800 transition text-sm">
-                        (786) 609-8524
-                    </a>
-                </nav>
-
-                <!-- Mobile button -->
-                <button id="menuBtn"
-                    class="lg:hidden w-11 h-11 border border-white/15 hover:border-white/25 transition flex items-center justify-center"
-                    aria-label="Open menu" aria-expanded="false">
-                    <i class="fa-solid fa-bars text-lg"></i>
-                </button>
-            </div>
-
-            <!-- Mobile menu (smooth open/close) -->
-            <div id="mobileMenu"
-                class="lg:hidden overflow-hidden max-h-0 opacity-0 transition-all duration-300 ease-in-out border-t border-white/10">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 py-5 flex flex-col gap-4">
-                    <a href="./index.html" class="py-2 hover:text-blue-300 transition">Home</a>
-                    <a href="./about.html" class="py-2 hover:text-blue-300 transition">About</a>
-                    <a href="./contact.html" class="py-2 hover:text-blue-300 transition">Contact</a>
-
-                    <a href="tel:7866098524"
-                        class="mt-2 inline-flex items-center justify-center px-5 py-3 bg-[#1b538e] hover:bg-blue-800 transition">
-                        Call (786) 609-8524
-                    </a>
-
-                    <div class="pt-3 border-t border-white/10 flex items-center gap-4">
-                        <a href="#" aria-label="Facebook" class="hover:text-blue-300 transition">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                        <a href="#" aria-label="Instagram" class="hover:text-blue-300 transition">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
 
     <main>
         <section class="relative min-h-screen overflow-hidden">
@@ -168,7 +92,7 @@
 
             <div class="relative z-10 min-h-screen">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-screen flex md:items-end items-center">
-                    <div class="w-full max-w-2xl pb-10 sm:pb-14">
+                    <div class="w-full max-w-2xl pb-10 sm:pb-14" data-aos="fade-up">
                         <div
                             class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/15 text-white/90 text-sm font-semibold">
                             <i class="fa-solid fa-truck-moving text-blue-400"></i>
@@ -199,7 +123,8 @@
                             </a>
                         </div>
 
-                        <div class="mt-8 flex flex-wrap items-center gap-4 text-white/80 text-sm font-medium">
+                        <div class="mt-8 flex flex-wrap items-center gap-4 text-white/80 text-sm font-medium"
+                            data-aos="zoom-in">
                             <div class="inline-flex items-center gap-2">
                                 <span class="w-2 h-2 rounded-full bg-blue-400"></span>
                                 65-ton Rotator Specialists
@@ -224,7 +149,7 @@
         <section class="bg-white py-16 sm:py-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
-                    <div>
+                    <div data-aos="fade-up">
                         <span
                             class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 text-slate-700 text-sm font-semibold">
                             <i class="fa-solid fa-shield-halved text-[#1b538e]"></i>
@@ -242,7 +167,7 @@
                         </p>
 
                         <div class="mt-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div class="flex gap-3 rounded-2xl border border-slate-200 p-4">
+                            <div class="flex gap-3 rounded-2xl border border-slate-200 p-4" data-aos="zoom-in">
                                 <div
                                     class="flex-shrink-0 w-11 h-11 rounded-xl bg-[#1c5590]/5 flex items-center justify-center">
                                     <i class="fa-solid fa-rotate text-[#1c5590] text-lg"></i>
@@ -254,7 +179,7 @@
                                 </div>
                             </div>
 
-                            <div class="flex gap-3 rounded-2xl border border-slate-200 p-4">
+                            <div class="flex gap-3 rounded-2xl border border-slate-200 p-4" data-aos="zoom-in">
                                 <div
                                     class="flex-shrink-0 w-11 h-11 rounded-xl bg-[#1c5590]/5 flex items-center justify-center">
                                     <i class="fa-solid fa-triangle-exclamation text-[#1c5590] text-lg"></i>
@@ -265,7 +190,7 @@
                                 </div>
                             </div>
 
-                            <div class="flex gap-3 rounded-2xl border border-slate-200 p-4">
+                            <div class="flex gap-3 rounded-2xl border border-slate-200 p-4" data-aos="zoom-in">
                                 <div
                                     class="flex-shrink-0 w-11 h-11 rounded-xl bg-[#1c5590]/5 flex items-center justify-center">
                                     <i class="fa-solid fa-road text-[#1c5590] text-lg"></i>
@@ -276,7 +201,7 @@
                                 </div>
                             </div>
 
-                            <div class="flex gap-3 rounded-2xl border border-slate-200 p-4">
+                            <div class="flex gap-3 rounded-2xl border border-slate-200 p-4" data-aos="zoom-in">
                                 <div
                                     class="flex-shrink-0 w-11 h-11 rounded-xl bg-[#1c5590]/5 flex items-center justify-center">
                                     <i class="fa-solid fa-truck-ramp-box text-[#1c5590] text-lg"></i>
@@ -302,7 +227,7 @@
                         </div>
                     </div>
 
-                    <div class="relative">
+                    <div class="relative" data-aos="zoom-in">
                         <div
                             class="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-orange-200/60 via-white to-blue-200/60 blur-2xl">
                         </div>
@@ -319,7 +244,7 @@
 
         <section class="bg-black py-16 sm:py-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto" data-aos="fade-up">
                     <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">
                         Heavy-Duty Services You Can Rely On
                     </h2>
@@ -332,7 +257,8 @@
                     <!-- Card base template: heading centered by default, shifts up on hover -->
                     <!-- 1 -->
                     <a href="./contact.html"
-                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 h-[260px] sm:h-[280px] lg:h-[300px]">
+                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 h-[260px] sm:h-[280px] lg:h-[300px]"
+                        data-aos="zoom-in">
                         <img src="./docs/assets/image_01.jpg" alt="65-ton rotator"
                             class="absolute inset-0 w-full h-full object-cover" />
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-[#1b538e]/85 transition duration-300">
@@ -362,7 +288,8 @@
 
                     <!-- 2 -->
                     <a href="./contact.html"
-                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 h-[260px] sm:h-[280px] lg:h-[300px]">
+                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 h-[260px] sm:h-[280px] lg:h-[300px]"
+                        data-aos="zoom-in">
                         <img src="./docs/assets/image_03.jpg" alt="Heavy-duty towing"
                             class="absolute inset-0 w-full h-full object-cover" />
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-[#1b538e]/85 transition duration-300">
@@ -389,7 +316,8 @@
 
                     <!-- 3 -->
                     <a href="./contact.html"
-                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 h-[260px] sm:h-[280px] lg:h-[300px]">
+                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 h-[260px] sm:h-[280px] lg:h-[300px]"
+                        data-aos="zoom-in">
                         <img src="./docs/assets/image_06.jpg" alt="Equipment transport"
                             class="absolute inset-0 w-full h-full object-cover" />
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-[#1b538e]/85 transition duration-300">
@@ -416,7 +344,8 @@
 
                     <!-- 4 -->
                     <a href="./contact.html"
-                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 h-[260px] sm:h-[280px] lg:h-[300px]">
+                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 h-[260px] sm:h-[280px] lg:h-[300px]"
+                        data-aos="zoom-in">
                         <img src="./docs/assets/image_04.jpg" alt="Recovery"
                             class="absolute inset-0 w-full h-full object-cover" />
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-[#1b538e]/85 transition duration-300">
@@ -444,7 +373,8 @@
 
                     <!-- 5 -->
                     <a href="./contact.html"
-                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 h-[260px] sm:h-[280px] lg:h-[300px]">
+                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 h-[260px] sm:h-[280px] lg:h-[300px]"
+                        data-aos="zoom-in">
                         <img src="./docs/assets/image_05.jpg" alt="Hazmat response"
                             class="absolute inset-0 w-full h-full object-cover" />
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-[#1b538e]/85 transition duration-300">
@@ -472,7 +402,8 @@
 
                     <!-- 6 -->
                     <a href="./contact.html"
-                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 h-[260px] sm:h-[280px] lg:h-[300px]">
+                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 h-[260px] sm:h-[280px] lg:h-[300px]"
+                        data-aos="zoom-in">
                         <img src="./docs/assets/image_02.jpg" alt="Tanker truck recovery"
                             class="absolute inset-0 w-full h-full object-cover" />
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-[#1b538e]/85 transition duration-300">
@@ -500,7 +431,8 @@
 
                     <!-- 7 (wide) -->
                     <a href="./contact.html"
-                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 h-[260px] sm:h-[280px] lg:h-[300px] sm:col-span-2 lg:col-span-2">
+                        class="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 h-[260px] sm:h-[280px] lg:h-[300px] sm:col-span-2 lg:col-span-2"
+                        data-aos="zoom-in">
                         <img src="./docs/assets/header_image.png" alt="Roadside support"
                             class="absolute inset-0 w-full h-full object-cover" />
                         <div class="absolute inset-0 bg-black/40 group-hover:bg-[#1b538e]/85 transition duration-300">
@@ -536,7 +468,7 @@
             </div>
             <div id="mapMsg" class="hidden mt-4 text-center text-sm text-white/80"></div>
             <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto" data-aos="fade-up">
                     <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">
                         We Serve the Florida Keys &amp; South Florida
                     </h2>
@@ -547,7 +479,8 @@
                     </p>
                 </div>
 
-                <div class="mt-10 bg-[#1b538e]/95 rounded-2xl overflow-hidden border border-white/10">
+                <div class="mt-10 bg-[#1b538e]/95 rounded-2xl overflow-hidden border border-white/10"
+                    data-aos="zoom-in">
                     <div class="px-5 sm:px-6 py-5">
                         <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
                             <div class="bg-white/10 border border-white/15 rounded-xl p-4">
@@ -556,7 +489,6 @@
                                     <i
                                         class="fa-solid fa-location-crosshairs absolute left-3 top-1/2 -translate-y-1/2 text-white/70"></i>
                                     <input id="locationInput" type="text" placeholder="Enter city or ZIP"
-                                        autocomplete="off" spellcheck="false"
                                         class="w-full pl-10 pr-4 py-3 rounded-xl bg-black/25 border border-white/15 text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-white/20" />
                                 </div>
                             </div>
@@ -649,7 +581,8 @@
                                     Directions
                                 </a>
                                 <a href="./contact.html"
-                                    class="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-[#1b538e] hover:bg-blue-800 text-white font-semibold transition">
+                                    class="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-[#1b538e] hover:bg-blue-800 text-white font-semibold transition"
+                                    data-aos="fade-up">
                                     <i class="fa-solid fa-paper-plane"></i>
                                     Request Help
                                 </a>
@@ -659,8 +592,10 @@
                         <div
                             class="lg:col-span-2 bg-black/30 border-t border-white/10 lg:border-t-0 lg:border-l border-white/10">
                             <div class="h-[340px] sm:h-[420px] lg:h-full w-full">
-                                <div id="mapCanvas" class="w-full h-full" aria-label="Map - Keys Heavy Towing & Recovery">
-                                </div>
+                                <iframe id="mapFrame" class="w-full h-full" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                    src="https://maps.google.com/maps?q=90168%20Overseas%20Highway%20Tavernier%20FL%2033070&t=&z=12&ie=UTF8&iwloc=&output=embed"
+                                    title="Map - Keys Heavy Towing & Recovery"></iframe>
                             </div>
                         </div>
                     </div>
@@ -670,25 +605,15 @@
 
 
         <script>
-            const MAPS_API_KEY = "AIzaSyC-SqXOaEIbX_xbhjhreVFYlX-gnS1LT2I";
             const HQ_ADDRESS = "90168 Overseas Highway, Tavernier, FL 33070";
             const HQ_ENCODED = encodeURIComponent(HQ_ADDRESS);
 
             const locationInput = document.getElementById("locationInput");
             const radiusSelect = document.getElementById("radiusSelect");
             const searchBtn = document.getElementById("searchBtn");
-            const mapCanvas = document.getElementById("mapCanvas");
+            const mapFrame = document.getElementById("mapFrame");
             const directionsBtn = document.getElementById("directionsBtn");
             const mapMsg = document.getElementById("mapMsg");
-
-            let map = null;
-            let autocomplete = null;
-            let directionsService = null;
-            let directionsRenderer = null;
-            let geocoder = null;
-            let hqMarker = null;
-            let hqLocation = null;
-            let selectedPlace = null;
 
             function zoomFromRadius(mi) {
                 const m = Number(mi);
@@ -710,210 +635,27 @@
                 mapMsg.textContent = text;
             }
 
-            function updateDirectionsLink(originText) {
-                if (originText) {
-                    const originEncoded = encodeURIComponent(originText);
-                    directionsBtn.href = `https://www.google.com/maps/dir/?api=1&origin=${originEncoded}&destination=${HQ_ENCODED}`;
-                    return;
-                }
-                directionsBtn.href = `https://www.google.com/maps/dir/?api=1&destination=${HQ_ENCODED}`;
-            }
-
-            function clearDirections() {
-                if (!directionsRenderer) return;
-                directionsRenderer.set("directions", null);
-            }
-
-            function placeOrMoveHQMarker(position) {
-                if (!hqMarker) {
-                    hqMarker = new google.maps.Marker({
-                        map,
-                        position,
-                        title: "Keys Heavy Towing & Recovery HQ",
-                    });
-                    return;
-                }
-                hqMarker.setPosition(position);
-                hqMarker.setMap(map);
-            }
-
-            function hideHQMarker() {
-                if (hqMarker) hqMarker.setMap(null);
-            }
-
-            function geocodeAddress(address) {
-                return new Promise((resolve, reject) => {
-                    geocoder.geocode({ address }, (results, status) => {
-                        if (status === "OK" && results && results[0]) {
-                            resolve(results[0]);
-                            return;
-                        }
-                        reject(new Error(status || "GEOCODE_FAILED"));
-                    });
-                });
-            }
-
-            async function showHQMap() {
-                if (!hqLocation) {
-                    const hqResult = await geocodeAddress(HQ_ADDRESS);
-                    hqLocation = hqResult.geometry.location;
-                }
-
-                clearDirections();
-                placeOrMoveHQMarker(hqLocation);
-
-                map.setCenter(hqLocation);
-                map.setZoom(zoomFromRadius(radiusSelect.value));
-            }
-
-            function requestDirections(origin, destination) {
-                return new Promise((resolve, reject) => {
-                    directionsService.route(
-                        {
-                            origin,
-                            destination,
-                            travelMode: google.maps.TravelMode.DRIVING,
-                        },
-                        (result, status) => {
-                            if (status === "OK") {
-                                resolve(result);
-                                return;
-                            }
-                            reject(new Error(status || "DIRECTIONS_FAILED"));
-                        }
-                    );
-                });
-            }
-
-            async function drawRouteToHQ(origin) {
-                const directions = await requestDirections(origin, HQ_ADDRESS);
-                hideHQMarker();
-                directionsRenderer.setDirections(directions);
-            }
-
-            async function updateMap() {
+            function updateMap() {
                 const userLocation = (locationInput.value || "").trim();
                 const radius = radiusSelect.value;
+                const zoom = zoomFromRadius(radius);
 
-                if (!map) {
-                    setMessage("Map is still loading...");
-                    return;
-                }
+                const query = userLocation ? userLocation : HQ_ADDRESS;
+                const queryEncoded = encodeURIComponent(query);
+
+                mapFrame.src = `https://maps.google.com/maps?q=${queryEncoded}&t=&z=${zoom}&ie=UTF8&iwloc=&output=embed`;
 
                 if (userLocation) {
-                    const routeOrigin = (selectedPlace && selectedPlace.formatted_address) || userLocation;
-                    updateDirectionsLink(routeOrigin);
-
-                    try {
-                        await drawRouteToHQ(routeOrigin);
-                        setMessage(`Showing route from: ${routeOrigin} to HQ. Radius selected: ${radius} mi.`);
-                        return;
-                    } catch (routeError) {
-                        try {
-                            const placeResult = await geocodeAddress(routeOrigin);
-                            if (!hqLocation) {
-                                const hqResult = await geocodeAddress(HQ_ADDRESS);
-                                hqLocation = hqResult.geometry.location;
-                            }
-                            clearDirections();
-                            placeOrMoveHQMarker(hqLocation);
-                            map.setCenter(placeResult.geometry.location);
-                            map.setZoom(zoomFromRadius(radius));
-                            setMessage(`Route unavailable. Showing map for: ${routeOrigin}.`);
-                            return;
-                        } catch (geocodeError) {
-                            setMessage(`Location not found. Please pick a valid city or ZIP from suggestions.`);
-                            return;
-                        }
-                    }
+                    const originEncoded = encodeURIComponent(userLocation);
+                    directionsBtn.href = `https://www.google.com/maps/dir/?api=1&origin=${originEncoded}&destination=${HQ_ENCODED}`;
+                    setMessage(`Showing map for: ${query} • Radius: ${radius} mi (zoom adjusted)`);
+                } else {
+                    directionsBtn.href = `https://www.google.com/maps/dir/?api=1&destination=${HQ_ENCODED}`;
+                    setMessage(`Showing our HQ location. Enter a city or ZIP to update the map.`);
                 }
-
-                updateDirectionsLink("");
-                await showHQMap();
-                setMessage(`Showing our HQ location. Enter a city or ZIP to get route suggestions.`);
-            }
-
-            function initAutocomplete() {
-                autocomplete = new google.maps.places.Autocomplete(locationInput, {
-                    fields: ["formatted_address", "geometry", "name"],
-                    componentRestrictions: { country: "us" },
-                    types: ["geocode"],
-                });
-
-                autocomplete.addListener("place_changed", () => {
-                    const place = autocomplete.getPlace();
-                    selectedPlace = place && place.geometry ? place : null;
-
-                    if (selectedPlace && selectedPlace.formatted_address) {
-                        locationInput.value = selectedPlace.formatted_address;
-                    }
-                });
-            }
-
-            function initGoogleMap() {
-                if (!window.google || !window.google.maps || !mapCanvas) {
-                    setMessage("Google Maps failed to initialize.");
-                    return;
-                }
-
-                map = new google.maps.Map(mapCanvas, {
-                    center: { lat: 25.3, lng: -80.6 },
-                    zoom: 9,
-                    mapTypeControl: false,
-                    streetViewControl: false,
-                    fullscreenControl: true,
-                });
-
-                directionsService = new google.maps.DirectionsService();
-                directionsRenderer = new google.maps.DirectionsRenderer({
-                    map,
-                    preserveViewport: false,
-                    suppressMarkers: false,
-                    polylineOptions: {
-                        strokeColor: "#1b538e",
-                        strokeOpacity: 0.95,
-                        strokeWeight: 5,
-                    },
-                });
-                geocoder = new google.maps.Geocoder();
-
-                initAutocomplete();
-                updateMap().catch(() => setMessage("Unable to load initial map view."));
-            }
-
-            function loadGoogleMapsApi() {
-                if (!MAPS_API_KEY) {
-                    setMessage("Map API key is missing.");
-                    return;
-                }
-
-                if (window.google && window.google.maps) {
-                    initGoogleMap();
-                    return;
-                }
-
-                if (document.getElementById("googleMapsApiScript")) {
-                    return;
-                }
-
-                const script = document.createElement("script");
-                script.id = "googleMapsApiScript";
-                script.src = `https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(MAPS_API_KEY)}&libraries=places`;
-                script.async = true;
-                script.defer = true;
-                script.onload = initGoogleMap;
-                script.onerror = () => {
-                    setMessage("Unable to load Google Maps. Check API key restrictions.");
-                };
-
-                document.head.appendChild(script);
             }
 
             searchBtn.addEventListener("click", updateMap);
-            radiusSelect.addEventListener("change", updateMap);
-            locationInput.addEventListener("input", () => {
-                selectedPlace = null;
-            });
 
             locationInput.addEventListener("keydown", (e) => {
                 if (e.key === "Enter") {
@@ -921,15 +663,13 @@
                     updateMap();
                 }
             });
-
-            loadGoogleMapsApi();
         </script>
 
 
 
         <section class="bg-black py-16 sm:py-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="max-w-4xl">
+                <div class="max-w-4xl" data-aos="fade-up">
                     <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
                         Heavy Recovery Readiness &amp; Safety First
                     </h2>
@@ -1017,7 +757,7 @@
 
         <section class="bg-white py-16 sm:py-20">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-2xl mx-auto">
+                <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
                     <p class="text-[#1b538e] text-xs sm:text-sm font-bold tracking-[0.18em] uppercase">
                         What our customers are saying
                     </p>
@@ -1030,7 +770,8 @@
                 </div>
 
                 <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-5 ">
-                    <div class="rounded-2xl border border-slate-200 bg-white shadow-sm p-8 text-center">
+                    <div class="rounded-2xl border border-slate-200 bg-white shadow-sm p-8 text-center"
+                        data-aos="zoom-in">
                         <p class="text-slate-700 leading-relaxed">
                             “Fast response and very professional. They handled our heavy recovery safely and kept us
                             updated the whole time.”
@@ -1048,7 +789,8 @@
                         <p class="text-sm text-slate-500 font-semibold">Google Review</p>
                     </div>
 
-                    <div class="rounded-2xl border border-slate-200 bg-white shadow-sm p-8 text-center">
+                    <div class="rounded-2xl border border-slate-200 bg-white shadow-sm p-8 text-center"
+                        data-aos="zoom-in">
                         <p class="text-slate-700 leading-relaxed">
                             “The crew arrived prepared with the right equipment. Smooth, efficient work and a true
                             safety-first approach.”
@@ -1066,7 +808,8 @@
                         <p class="text-sm text-slate-500 font-semibold">Google Review</p>
                     </div>
 
-                    <div class="rounded-2xl border border-slate-200 bg-white shadow-sm p-8 text-center">
+                    <div class="rounded-2xl border border-slate-200 bg-white shadow-sm p-8 text-center"
+                        data-aos="zoom-in">
                         <p class="text-slate-700 leading-relaxed">
                             “Called late at night and they still responded quickly. Friendly team, professional service,
                             and excellent communication.”
@@ -1095,7 +838,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 min-h-[520px]">
                 <!-- Left Content -->
                 <div class="bg-[#1b538e] px-6 sm:px-10 lg:px-14 py-14 flex items-center">
-                    <div class="max-w-xl">
+                    <div class="max-w-xl" data-aos="fade-up">
                         <h2 class="text-4xl sm:text-5xl font-bold text-white tracking-tight leading-tight">
                             Keys Heavy<br />Towing &amp; Recovery
                         </h2>
@@ -1128,11 +871,11 @@
                         </div>
 
                         <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-3">
-                            <div class="rounded-2xl bg-black/20 border border-white/15 p-4">
+                            <div class="rounded-2xl bg-black/20 border border-white/15 p-4" data-aos="zoom-in">
                                 <p class="text-white font-bold">Specialty</p>
                                 <p class="mt-1 text-white/85 text-sm">65-ton rotator heavy recovery</p>
                             </div>
-                            <div class="rounded-2xl bg-black/20 border border-white/15 p-4">
+                            <div class="rounded-2xl bg-black/20 border border-white/15 p-4" data-aos="zoom-in">
                                 <p class="text-white font-bold">Capabilities</p>
                                 <p class="mt-1 text-white/85 text-sm">Hazmat, tankers, equipment transport
                                 </p>
@@ -1147,7 +890,7 @@
                         class="w-full h-full object-cover" />
                     <div class="absolute inset-0 bg-black/30"></div>
 
-                    <div class="absolute bottom-6 left-6 right-6">
+                    <div class="absolute bottom-6 left-6 right-6" data-aos="fade-up">
                         <div class="rounded-2xl bg-black/55 border border-white/10 p-5 backdrop-blur-sm">
                             <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                                 <div class="text-white">
@@ -1177,34 +920,34 @@
             </div>
 
             <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center">
+                <div class="text-center" data-aos="fade-up">
                     <p class="text-blue-400 text-xs sm:text-sm font-bold tracking-[0.18em] uppercase">
                         Proud Members Of
                     </p>
                 </div>
 
                 <div class="mt-10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8 items-center">
-                    <div class="flex items-center justify-center">
+                    <div class="flex items-center justify-center" data-aos="zoom-in">
                         <img src="https://asuperiortowing.guardianfleetservice.com/wp-content/uploads/2025/02/florida-trucking-logo.webp"
                             alt="Association logo" class="h-12 sm:h-14 object-contain opacity-90" />
                     </div>
 
-                    <div class="flex items-center justify-center">
+                    <div class="flex items-center justify-center" data-aos="zoom-in">
                         <img src="https://asuperiortowing.guardianfleetservice.com/wp-content/uploads/2025/02/SCRA_Logo_NoTaglineWH.webp"
                             alt="Association logo" class="h-12 sm:h-14 object-contain opacity-90" />
                     </div>
 
-                    <div class="flex items-center justify-center">
+                    <div class="flex items-center justify-center" data-aos="zoom-in">
                         <img src="https://asuperiortowing.guardianfleetservice.com/wp-content/uploads/2025/02/TRAA-logo.webp"
                             alt="Association logo" class="h-12 sm:h-14 object-contain opacity-90" />
                     </div>
 
-                    <div class="flex items-center justify-center">
+                    <div class="flex items-center justify-center" data-aos="zoom-in">
                         <img src="https://asuperiortowing.guardianfleetservice.com/wp-content/uploads/2025/02/sunshine-state-towing-logo.webp"
                             alt="Association logo" class="h-12 sm:h-14 object-contain opacity-90" />
                     </div>
 
-                    <div class="flex items-center justify-center">
+                    <div class="flex items-center justify-center" data-aos="zoom-in">
                         <img src="https://asuperiortowing.guardianfleetservice.com/wp-content/uploads/2025/02/Towing-Museum-White.webp"
                             alt="Association logo" class="h-12 sm:h-14 object-contain opacity-90" />
                     </div>
@@ -1213,182 +956,15 @@
         </section>
     </main>
 
-    <footer class="bg-white border-t border-slate-200">
-        <!-- Newsletter -->
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-14">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-                <!-- Logo / Tagline -->
-                <div class="lg:col-span-4" data-aos="fade-up">
-                    <img src="./docs/assets/logo.png" alt="Keys Heavy Towing & Recovery"
-                        class="h-20 w-auto object-contain" />
-                    <p class="mt-3 text-sm text-slate-600 leading-relaxed">
-                        Tavernier, FL • Serving Key West to Miami
-                    </p>
-                </div>
-
-                <!-- Newsletter form -->
-                <div class="lg:col-span-8" data-aos="fade-up">
-                    <p class="text-slate-900 font-bold uppercase tracking-wide text-sm">
-                        Sign up for our newsletter
-                    </p>
-                    <p class="mt-2 text-sm text-slate-600 leading-relaxed">
-                        Subscribe for occasional updates about service coverage and availability.
-                    </p>
-
-                    <form class="mt-5 grid grid-cols-1 md:grid-cols-12 gap-3">
-                        <div class="md:col-span-9">
-                            <label class="sr-only" for="newsletter-email">Email address</label>
-                            <input id="newsletter-email" type="email" placeholder="Email Address"
-                                class="w-full px-4 py-3 rounded-none border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-600/25 focus:border-blue-600" />
-                        </div>
-
-                        <div class="md:col-span-3">
-                            <button type="submit"
-                                class="w-full py-3 rounded-none bg-[#1b538e] hover:bg-[#1b538e]/80 text-white transition">
-                                Sign Up
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        <!-- Footer Links Row -->
-        <div class="border-t border-slate-200">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
-                    <!-- HQ -->
-                    <div class="md:col-span-4" data-aos="fade-up">
-                        <p class="text-slate-900 font-bold text-sm uppercase tracking-wide">Headquarters</p>
-                        <div class="mt-4 text-sm text-slate-600 leading-relaxed space-y-2">
-                            <p>90168 Overseas Highway</p>
-                            <p>Tavernier, Florida 33070</p>
-                            <p>
-                                p:
-                                <a href="tel:7866098524" class="text-[#1b538e] hover:underline">
-                                    (786) 609-8524
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Links 1 -->
-                    <div class="md:col-span-4" data-aos="fade-up">
-                        <p class="text-slate-900 font-bold text-sm uppercase tracking-wide">Pages</p>
-                        <ul class="mt-4 space-y-3 text-sm text-slate-600">
-                            <li><a href="./index.html" class="hover:text-[#1b538e] transition">Home</a></li>
-                            <li><a href="./about.html" class="hover:text-[#1b538e] transition">About Us</a></li>
-                            <li><a href="./contact.html" class="hover:text-[#1b538e] transition">Contact Us</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Links 2 -->
-                    <div class="md:col-span-4" data-aos="fade-up">
-                        <p class="text-slate-900 font-bold text-sm uppercase tracking-wide">Quick Links</p>
-                        <ul class="mt-4 space-y-3 text-sm text-slate-600">
-                            <li><a href="./index.html#services" class="hover:text-[#1b538e] transition">Services</a>
-                            </li>
-                            <li><a href="./index.html#testimonials"
-                                    class="hover:text-[#1b538e] transition">Testimonials</a></li>
-                            <li>
-                                <a href="https://www.google.com/maps?q=90168+Overseas+Highway+Tavernier+FL+33070"
-                                    target="_blank" class="hover:text-[#1b538e] transition">
-                                    Directions
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Bottom Bar -->
-        <div class="border-t border-slate-200">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-                <div class="grid grid-cols-1 sm:grid-cols-3 items-center gap-4 text-sm text-slate-500">
-                    <div class="text-center sm:text-left">
-                        Copyright © 2026. Keys Heavy Towing &amp; Recovery
-                    </div>
-
-                    <div class="flex items-center justify-center gap-4">
-                        <a href="#" aria-label="Facebook"
-                            class="w-9 h-9 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 hover:text-[#1b538e] hover:border-blue-200 hover:bg-blue-50 transition">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                        <a href="#" aria-label="Instagram"
-                            class="w-9 h-9 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 hover:text-[#1b538e] hover:border-blue-200 hover:bg-blue-50 transition">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                    </div>
-
-                    <div class="text-center sm:text-right">
-                        <a href="#" class="hover:text-[#1b538e] transition">Privacy Policy</a>
-                        <span class="text-slate-300 px-2">|</span>
-                        <a href="#" class="hover:text-[#1b538e] transition">Terms of Services</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <div id="footer"></div>
 
 
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="https://unpkg.com/lenis@1.3.1/dist/lenis.min.js"></script>
+    <script src="./Docs/javascript/global.js"></script>
+    <script src="./Docs/javascript/Navbar.js"></script>
+    <script src="./Docs/javascript/Footer.js"></script>
 
 </body>
-
-
-<script>
-    const lenis = new Lenis({
-        autoRaf: true,
-    });
-
-    const toTopBtn = document.getElementById("toTopBtn");
-
-    const toggleToTop = () => {
-        if (window.scrollY > 450) {
-            toTopBtn.classList.remove("opacity-0", "translate-y-4", "pointer-events-none");
-            toTopBtn.classList.add("opacity-100", "translate-y-0");
-        } else {
-            toTopBtn.classList.add("opacity-0", "translate-y-4", "pointer-events-none");
-            toTopBtn.classList.remove("opacity-100", "translate-y-0");
-        }
-    };
-
-    window.addEventListener("scroll", toggleToTop);
-    toggleToTop();
-
-    toTopBtn.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-
-
-    // navbar
-
-
-    const btn = document.getElementById("menuBtn");
-    const menu = document.getElementById("mobileMenu");
-
-    const openMenu = () => {
-        btn.setAttribute("aria-expanded", "true");
-        menu.classList.remove("max-h-0", "opacity-0");
-        menu.classList.add("max-h-[420px]", "opacity-100");
-    };
-
-    const closeMenu = () => {
-        btn.setAttribute("aria-expanded", "false");
-        menu.classList.add("max-h-0", "opacity-0");
-        menu.classList.remove("max-h-[420px]", "opacity-100");
-    };
-
-    btn.addEventListener("click", () => {
-        const expanded = btn.getAttribute("aria-expanded") === "true";
-        expanded ? closeMenu() : openMenu();
-    });
-
-    window.addEventListener("resize", () => {
-        if (window.innerWidth >= 1024) closeMenu();
-    });
-
-</script>
 
 </html>
